@@ -22,10 +22,10 @@ const LoginComponent = () => {
     setState({ ...state, [name]: event.target.value });
   };
 
-  const handleSubmitForm = (e) => {
+  const handleSubmitForm = async (e) => {
     e.preventDefault();
     // console.log(username, password);
-    axios
+    await axios
       .post(`${import.meta.env.VITE_APP_KEY}/login`, { username, password })
       .then((response) => {
         // console.log(response);

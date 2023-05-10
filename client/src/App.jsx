@@ -4,15 +4,15 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import parse from "html-react-parser";
-import { getUser,getToken } from "./services/authorize";
+import { getUser, getToken } from "./services/authorize";
 
 function App() {
   // รับบทความจาก axios เก็บใน state (object in array)
   const [blogs, setBlogs] = useState([]);
 
   // ดึงบทความ มาแสดง
-  const fetchData = () => {
-    axios
+  const fetchData = async () => {
+    await axios
       .get(`${import.meta.env.VITE_APP_KEY}/blogs`)
       .then((Response) => {
         setBlogs(Response.data);
@@ -41,9 +41,9 @@ function App() {
     });
   };
 
-  const deleteBlog = (slug) => {
+  const deleteBlog = async (slug) => {
     // ส่ง reqest ไปที่ api เพื่อลบบทความ
-    axios
+    await axios
       .delete(`${import.meta.env.VITE_APP_KEY}/blog/${slug}`, {
         headers: {
           Authorization: `Bearer ${getToken()}`,

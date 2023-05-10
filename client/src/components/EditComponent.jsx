@@ -32,8 +32,8 @@ const EditComponent = () => {
   // ดึง slug จาก params
   const { slug } = useParams();
 
-  useEffect(() => {
-    axios
+  useEffect(async() => {
+    await axios
       .get(`${import.meta.env.VITE_APP_KEY}/blog/${slug}`)
       .then((response) => {
         const { title, content, author, slug } = response.data;
