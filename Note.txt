@@ -1,0 +1,16 @@
+Project MERN Stack 101 
+This project aims to provide a comprehensive learning experience for CRUD (Create, Read, Update, Delete) operations by developing both the front-end and back-end components. It utilizes the Mongoose library to establish a connection with MongoDB. 
+
+The project consists of nine packages, including:
+
+- Express: A powerful framework for building web applications
+- Dotenv: A package for managing environment variables
+- Mongoose: An elegant MongoDB object modeling tool
+- Jsonwebtoken: A library for implementing JSON Web Tokens
+- Express-jwt: Middleware for validating JSON Web Tokens
+- Cors: A package for enabling Cross-Origin Resource Sharing
+- Nodemon: A utility for automatically restarting the server during development
+- Slugify: A tool for creating URL-friendly slugs
+- Morgan: A logging middleware for HTTP requests
+
+On the back-end, the project demonstrates the effective use of the MVC (Model-View-Controller) pattern to organize file locations. Through this mini project, I gained a solid understanding of the MERN stack concept, including the flow of data from the client to the server and its storage in the database. Additionally, I learned how to work with APIs, use Axios for handling HTTP requests, and design API specifications. Overall, this experience has greatly clarified my understanding and knowledge in these areas.
